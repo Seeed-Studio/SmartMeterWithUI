@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/orange_fit" >
+
+            <Button
+                android:id="@+id/bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/relativeLayout1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="210dp"
+                android:background="@drawable/bluetooth" />
+
+            <Button
+                android:id="@+id/hold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/bluetooth"
+                android:layout_alignBottom="@+id/bluetooth"
+                android:layout_marginLeft="28dp"
+                android:layout_toRightOf="@+id/bluetooth"
+                android:background="@drawable/hold_off" />
+
+            <Button
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/hold"
+                android:layout_alignBottom="@+id/hold"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@+id/hold"
+                android:background="@drawable/stop_off" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellow_fit" >
+
+            <Button
+                android:id="@+id/switch_turn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/turn_off" />
+
+            <com.seeedstudio.smartmeter.LCDView
+                android:id="@+id/lcd_view"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/switch_turn"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.seeedstudio.smartmeter.ControllerWheel
+        android:id="@+id/controllerWheel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

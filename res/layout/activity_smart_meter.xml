@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SmartMeterActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/orange_fit" >
+
+        <Button
+            android:id="@+id/bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/relativeLayout1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="210dp"
+            android:background="@drawable/bluetooth" />
+
+        <Button
+            android:id="@+id/hold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/bluetooth"
+            android:layout_alignBottom="@+id/bluetooth"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@+id/bluetooth"
+            android:background="@drawable/hold_off" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/hold"
+            android:layout_alignBottom="@+id/hold"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/hold"
+            android:background="@drawable/stop_off" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_fit" >
+
+        <Button
+            android:id="@+id/switch_turn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/turn_off" />
+
+        <com.seeedstudio.smartmeter.LCDView
+            android:id="@+id/lcd_view"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/switch_turn"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginBottom="46dp" >
+
+        <!--
+             <button
+            android:id="@+id/ampere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/voltage"
+            android:layout_marginLeft="49dp"
+            android:layout_toRightOf="@+id/milliampere"
+            android:src="@drawable/a_sel" />
+        -->
+
+        <Button
+            android:id="@+id/voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="31dp"
+            android:background="@drawable/v_sel" />
+
+        <Button
+            android:id="@+id/ohm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ampere"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="54dp"
+            android:layout_toRightOf="@+id/voltage"
+            android:background="@drawable/om_sel" />
+
+        <Button
+            android:id="@+id/milliampere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ohm"
+            android:layout_marginRight="54dp"
+            android:layout_toLeftOf="@+id/ampere"
+            android:background="@drawable/ma_sel" />
+
+        <Button
+            android:id="@+id/ampere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/voltage"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="31dp"
+            android:background="@drawable/a_sel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/relativeLayout2"
+        android:background="@drawable/logo" >
+    </RelativeLayout>
+
+    <com.seeedstudio.smartmeter.ConstomVIew
+        android:id="@+id/constomVIew1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
