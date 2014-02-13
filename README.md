@@ -39,4 +39,4 @@ global distributors and partners to push open hardware movement.<br>
 
 [1]: mailto://yexiaobo@seeedstudio.com
 
-
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/SmartMeterWithUI)](https://github.com/igrigorik/ga-beacon)
